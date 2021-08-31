@@ -1,0 +1,1 @@
+web: goldenview22 mainscript:app
