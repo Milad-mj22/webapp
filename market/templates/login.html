@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+  Register Page
+{% endblock %}
+
+{% block content %}
+<body class ='text-center'>
+    <div class = 'container'>
+        <form method="POST" class='form-register' style="color: aliceblue;">
+          <img src="https://goldenview.ir/wp-content/uploads/2021/05/golden-logo-site.png" alt="Stickman" width="180" height="180">
+          {{ form.hidden_tag()}}
+          <h1 class='h3 font-weight-normal'>
+            Please Log-in
+          </h1>
+          <br>
+            {{ form.username.label() }}
+            {{ form.username(class='form-control',placeholder='User Name')}}
+            {{ form.password.label() }}
+            {{ form.password(class='form-control',placeholder='Password')}}
+            <br>
+            <div class="checkbox mb-2">
+                <h6>Do you have any account?</h6>
+                <a class="btn btn-sm btn-secondary" href="{{url_for('register_page')}}">Register</a>
+            </div>
+
+            {{form.submit(class='btn btn-lg btn-block btn-primary')}}
+  
+  
+        
+        </form>
+    </div>
+</body>
+
+
+
+{% endblock %}
